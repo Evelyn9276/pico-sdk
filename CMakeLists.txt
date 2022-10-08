@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
+include(pico_sdk_import.cmake)
 
 # Note: this CMakeLists.txt can be used as a top-level CMakeLists.txt for the SDK itself. For all other uses
 # it is included as a subdirectory via the pico_sdk_init() method provided by pico_sdk_init.cmake
@@ -6,7 +7,6 @@ if (NOT TARGET _pico_sdk_inclusion_marker)
     add_library(_pico_sdk_inclusion_marker INTERFACE)
     # This is a no-op unless we are the top-level CMakeLists.txt
     include(pico_sdk_init.cmake)
-    include(pico_sdk_import.cmake)
 
     project(pico_sdk C CXX ASM)
 
