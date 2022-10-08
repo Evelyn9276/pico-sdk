@@ -6,6 +6,7 @@ if (NOT TARGET _pico_sdk_inclusion_marker)
     add_library(_pico_sdk_inclusion_marker INTERFACE)
     # This is a no-op unless we are the top-level CMakeLists.txt
     include(pico_sdk_init.cmake)
+    include(pico_sdk_import.cmake)
 
     project(pico_sdk C CXX ASM)
 
